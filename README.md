@@ -10,13 +10,13 @@
 ## Description
 Mariadb in a docker container based on alpine image.
 ```
-FROM centos:latest
+FROM alpine:latest
 ```
 
 ## Usage
 ### Standalone
 ```
-docker run -d --name mariadb -e MYSQL_ROOT_PWD=ABC123xyz -e MYSQL_USER_DB=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_USER_PWD=ABC123xyz -p 3306:3306 mspbgx/centos-mariadb
+docker run -d --name mariadb -e MYSQL_ROOT_PWD=ABC123xyz -e MYSQL_USER_DB=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_USER_PWD=ABC123xyz -p 3306:3306 mspbgx/alpine-mariadb
 ```
 ### Compose
 cat docker-compose.yml
@@ -26,7 +26,7 @@ version: '3.1'
 services:
 
   db:
-    image: mspbgx/centos-mariadb
+    image: mspbgx/alpine-mariadb
     restart: always
     environment:
       MYSQL_ROOT_PWD: ABC123xyz
