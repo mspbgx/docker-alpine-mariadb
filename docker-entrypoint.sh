@@ -33,7 +33,7 @@ else
 	# create temp file
 	tempSqlFile='/var/lib/mysql/mysql-first-time.sql'
 	if [ ! -f "$tempSqlFile" ]; then
-	    return 1
+	    touch $tempSqlFile
 	fi
 
 	# save sql
