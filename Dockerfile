@@ -4,7 +4,7 @@ MAINTAINER Maximilian Sparenberg <sparenberg@openenv.de>
 
 RUN apk update
 RUN apk add mariadb mariadb-client
-RUN addgroup mysql mysql && \
+RUN addgroup mysql mysql 
 RUN rm -rf /var/cache/apk/*
 
 
