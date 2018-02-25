@@ -31,7 +31,7 @@ else
 	echo "[i] MySql root password: $MYSQL_ROOT_PASSWORD"
 
 	# create temp file
-	tempSqlFile='/tmp/mysql-first-time.sql'
+	tempSqlFile='/var/lib/mysql/mysql-first-time.sql'
 	if [ ! -f "$tempSqlFile" ]; then
 	    return 1
 	fi
