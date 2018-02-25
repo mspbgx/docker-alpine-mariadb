@@ -29,7 +29,7 @@ services:
     image: mspbgx/alpine-mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PWD: ABC123xyz
+      MYSQL_ROOT_PASSWORD: ABC123xyz
 ```
 ### Variables:
 ```
