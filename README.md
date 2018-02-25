@@ -16,7 +16,7 @@ FROM alpine:latest
 ## Usage
 ### Standalone
 ```
-docker run -d --name mariadb -e MYSQL_ROOT_PWD=ABC123xyz -e MYSQL_USER_DB=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_USER_PWD=ABC123xyz -p 3306:3306 mspbgx/alpine-mariadb
+docker run -d --name mariadb -e MYSQL_ROOT_PASSWORD=ABC123xyz -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_PASSWORD=ABC123xyz -p 3306:3306 mspbgx/alpine-mariadb
 ```
 ### Compose
 cat docker-compose.yml
@@ -33,14 +33,14 @@ services:
 ```
 ### Variables:
 ```
-MYSQL_ROOT_PWD = <mysql root password>
+MYSQL_ROOT_PASSWORD = <mysql root password>
 ```
 ```
-MYSQL_USER_DB = <database to be created>
+MYSQL_DATABASE = <database to be created>
 ```
 ```
 MYSQL_USER = <user to be created>
 ```
 ```
-MYSQL_USER_PWD = <password to be created>
+MYSQL_PASSWORD = <password to be created>
 ```
