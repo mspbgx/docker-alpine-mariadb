@@ -31,7 +31,7 @@ else
 	echo "[i] MySql root password: $MYSQL_ROOT_PASSWORD"
 
 	# create temp file
-	tempSqlFile='/var/lib/mysql/mysql-first-time.sql'
+	tempSqlFile='/tmp/mysql-first-time.sql'
 	if [ ! -f "$tempSqlFile" ]; then
 	    touch $tempSqlFile
 	fi
@@ -70,7 +70,7 @@ EOF
 	# run sql in tempfile
 	echo "[i] run tempfile: $tempSqlFile"
 	/usr/bin/mysqld --user=mysql --bootstrap --verbose=0 < $tempSqlFile
-	#rm -f $tempSqlFile
+	rm -f $tempSqlFile
 fi
 
 echo "[i] Sleeping 5 sec"
